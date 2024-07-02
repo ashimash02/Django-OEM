@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if not user.is_authenticated %}
+<div class="d-flex align-items-center justify-content-center min-vh-2">
+<h1> Thanks for visiting!</h1>
+    </div>
+<div class="d-flex align-items-center justify-content-center">
+<h2> Login again <a href="{% url 'home' %}">here</a></h2>
+</div>
+{% endif %}
+{% endblock %}
